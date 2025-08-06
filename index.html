@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Anandi Atta Chakki | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    /* === BASIC STYLES === */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fffef3;
+      color: #333;
+    }
+
+    header {
+      background: #f9a825;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      margin: 5px 0;
+      font-size: 1.1em;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* === HERO SECTION === */
+    .hero-section {
+      text-align: center;
+      padding: 30px;
+      background: #fff8e1;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #43a047;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    /* === FEATURES SECTION === */
+    .features {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 30px;
+      background: #fffbe7;
+    }
+
+    .feature-card {
+      background: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      width: 280px;
+      padding: 20px;
+      box-shadow: 2px 4px 12px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .feature-card h3 {
+      color: #d84315;
+      margin-bottom: 10px;
+    }
+
+    /* === FOOTER === */
+    footer {
+      background: hsl(43, 96%, 58%);
+      text-align: center;
+      padding: 15px;
+      font-size: 0.95em;
+      color: #333;
+    }
+    .video-background {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  filter: brightness(0.6); /* Optional dark overlay */
+}
+
+.video-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  top: 40%;
+  transform: translateY(-50%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.full-video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.full-video-bg video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.video-overlay-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 10;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgba(0, 0, 0, 0.3); /* optional transparent box */
+  border-radius: 10px;
+}
+.site-header {
+  position: relative;
+  text-align: center;
+  background-color: #f8f1e4; /* Soft wheat tone like products.html */
+  padding: 20px 0;
+  border-bottom: 2px solid #d6c2a8;
+}
+
+.left-logo {
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.center-content h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #6b3e26; /* Dark brown heading */
+  font-family: 'Georgia', serif;
+}
+
+.center-content p {
+  margin: 5px 0 15px;
+  font-size: 14px;
+  color: #4b3621; /* Medium brown subtext */
+}
+
+nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #6b3e26;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #a0522d; /* lighter brown */
+}
+
+  </style>
+</head>
+<body>
+<div class="full-video-bg">
+  <video autoplay muted loop playsinline>
+    <source src="anandivid-bg.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+ <header style="background: #f9a825; color: white; padding: 20px 20px 10px 140px; position: relative; text-align: center;">
+  <!-- Logo on the left -->
+  <img src="logo1" alt="Logo" style="position: absolute; top: 20px; left: 20px; height: 100px; width: 100px; border-radius: 12px;" />
+
+  <!-- Title & tagline -->
+  <h1 style="margin: 0;">Anandi Atta Chakki</h1>
+  <p style="margin: 5px 0;">Fresh Chakki Atta in Satara — Hygienic • Affordable • Trusted since 2007</p>
+
+  <!-- Navigation -->
+  <nav style="margin-top: 10px;">
+    <a href="index.html" style="margin: 0 12px; text-decoration: none; color: white; font-weight: bold;">Home</a>
+    <a href="about.html" style="margin: 0 12px; text-decoration: none; color: white; font-weight: bold;">About</a>
+    <a href="products.html" style="margin: 0 12px; text-decoration: none; color: white; font-weight: bold;">Products</a>
+    <a href="contact.html" style="margin: 0 12px; text-decoration: none; color: white; font-weight: bold;">Contact</a>
+    <a href="faq.html" style="margin: 0 12px; text-decoration: none; color: white; font-weight: bold;">FAQs</a>
+
+  </nav>
+</header>
+
+
+
+
+  <main>
+    <section class="hero-section">
+      <img src="images/shop.jpg" alt="" class="hero-img" />
+      <h2>Welcome to Anandi Atta Chakki</h2>
+      <p>We grind fresh wheat, jowar, besan and more — right in front of your eyes!</p>
+      <a href="products.html" class="cta-button">View Our Products</a>
+    </section>
+
+    <section class="features">
+      <div class="feature-card">
+        <h3>🌾 Pure Ingredients</h3>
+        <p>We use only fresh, clean grains. No preservatives. No compromise.</p>
+      </div>
+      <div class="feature-card">
+        <h3>⚙️ Stone Grinding</h3>
+        <p>Traditional stone chakki method ensures better taste & nutrition.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🏠 Local & Trusted</h3>
+        <p>Serving Satara families with trust and love for 10+ years.</p>
+      </div>
+    </section>
+  </main>
+<!-- Background Video Section -->
+<div class="video-background">
+  <video autoplay muted loop playsinline>
+    <source src="anandivid.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+  <footer>
+    <p>&copy; 2025 Anandi Atta Chakki | Satara | Designed by Suzan M.</p>
+  </footer>
+
+</body>
+<!-- Sticky WhatsApp Chat Button -->
+<a href="https://wa.me/919922433203" target="_blank" title="Chat with us on WhatsApp" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 50%;
+  font-size: 24px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-decoration: none;">
+  💬
+</a>
+
+</html>

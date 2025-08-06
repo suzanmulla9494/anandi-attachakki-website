@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery - Anandi Atta Chakki</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    header, footer{
+      background: #f9a825;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 30px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+    @media (max-width: 600px) {
+      .gallery img {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Anandi Atta Chakki</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2 style="text-align:center; margin-top: 30px;">Our Gallery</h2>
+    <p style="text-align:center; color: #666;">Photos of our Atta Machines & Shop</p>
+    <div class="gallery">
+      <img src="images/machine1.jpg" alt="Machine 1">
+      <img src="images/machine2.jpg" alt="Machine 2">
+      <img src="images/machine3.jpg" alt="Machine 3">
+      <img src="images/shop1.jpg" alt="Shop View 1">
+      <img src="images/shop2.jpg" alt="Shop View 2">
+      <img src="images/shop3.jpg" alt="Customer Delivery">
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Anandi Atta Chakki. All rights reserved.</p>
+  </footer>
+
+</body>
+<!-- Sticky WhatsApp Chat Button -->
+<a href="https://wa.me/919922433203" target="_blank" title="Chat with us on WhatsApp" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 50%;
+  font-size: 24px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-decoration: none;">
+  💬
+</a>
+
+</html>

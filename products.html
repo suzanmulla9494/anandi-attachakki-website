@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Our Machines | Anandi Atta Chakki</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fffef3;
+      color: #333;
+    }
+
+    header {
+      background: #f9a825;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+    }
+
+    header p {
+      margin: 5px 0;
+      font-size: 1.1em;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .products {
+      padding: 30px;
+      background: #fffbe7;
+      text-align: center;
+    }
+
+    .products h2 {
+      margin-bottom: 20px;
+      color: #d84315;
+    }
+
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .product-card {
+      background: white;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      width: 280px;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 15px;
+    }
+
+    .product-info h3 {
+      margin: 0 0 10px;
+      color: #5d2601;
+    }
+
+    .product-info p {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+   .gallery-grid {
+  display: none;
+  margin-top: 20px;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+
+    .gallery-grid img {
+      width: 200px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    .show-gallery {
+      display: flex;
+    }
+
+    footer {
+      background: #fbc02d;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.95em;
+      color: #333;
+    }
+    .product-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.video-container {
+  margin-bottom: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+}
+.features {
+  margin-top: 20px;
+}
+
+.features h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.feature-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.feature-images img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+.features-gallery {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.features-gallery img {
+  width: 150px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.features-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox modal */
+#lightbox-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+}
+#lightbox-modal img {
+  display: block;
+  max-width: 90%;
+  max-height: 80%;
+  margin: 5% auto;
+}
+/* Fullscreen image viewer */
+.fullscreen-img {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+.fullscreen-img img {
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0 0 20px #fff;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Anandi Atta Chakki</h1>
+    <p>Our Latest Range of Atta Chakki Machines</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQs</a>
+    </nav>
+  </header>
+
+  <section class="products">
+    <h2>Explore Our Machines</h2>
+    <div class="product-grid">
+
+      <!-- Machine 1: Classic Flour Mill -->
+      <div class="product-card" onclick="toggleGallery('classicGallery')">
+       
+        <div class="product-info">
+          <h3>Classic Flour Mill</h3>
+          <p>1, 2 HP motor, stainless steel body, for home use.</p>
+        </div>
+      </div>
+
+      <div id="classicGallery" class="gallery-grid">
+        
+       <a href="an1.jpg" data-lightbox="classic"><img src="an1.jpg" alt=""></a>
+        <a href="an2.jpg" data-lightbox="classic"><img src="an2.jpg" alt=""></a>
+         <a href="an3.jpg" data-lightbox="classic"><img src="an3.jpg" alt=""></a>
+          <a href="an4.jpg" data-lightbox="classic"><img src="an4.jpg" alt=""></a>
+           <a href="an5.jpg" data-lightbox="classic"><img src="an5.jpg alt=""></a>
+            <a href="an26.jpg" data-lightbox="classic"><img src="an26.jpg" alt=""></a>
+             <a href="an27.jpg" data-lightbox="classic"><img src="an27.jpg" alt=""></a>
+              <a href="an8.jpg" data-lightbox="classic"><img src="an8.jpg" alt=""></a>
+               <a href="an29.jpg" data-lightbox="classic"><img src="an29.jpg" alt=""></a>
+                <a href="an210.jpg" data-lightbox="classic"><img src="an210.jpg" alt=""></a>
+                 <a href="an211.jpg" data-lightbox="classic"><img src="an212.jpg" alt=""></a>
+                  <a href="an212.jpg" data-lightbox="classic"><img src="an213.jpg" alt=""></a>
+                   <a href="an213.jpg" data-lightbox="classic"><img src="an1.jpg" alt=""></a>
+                    <a href="an214.jpg" data-lightbox="classic"><img src="an214.jpg" alt=""></a>
+                     <a href="an215.jpg" data-lightbox="classic"><img src="an215.jpg" alt=""></a>
+                      <a href="an216.jpg" data-lightbox="classic"><img src="an216.jpg" alt=""></a>
+                       <a href="an217.jpg" data-lightbox="classic"><img src="an217.jpg" alt=""></a>
+                        <a href="an218.jpg" data-lightbox="classic"><img src="an218.jpg" alt=""></a>
+                         <a href="an19.jpg" data-lightbox="classic"><img src="an19.jpg" alt=""></a>
+                          <a href="an220.jpg" data-lightbox="classic"><img src="an220.jpg" alt=""></a>
+      <a href="an221.jpg" data-lightbox="classic"><img src="an221.jpg" alt=""></a>
+           <a href="an222.jpg" data-lightbox="classic"><img src="an222.jpg" alt=""></a>
+                 <a href="an223.jpg" data-lightbox="classic"><img src="an223.jpg" alt=""></a>
+        <a href="an224.jpg" data-lightbox="classic"><img src="an224.jpg" alt=""></a>
+        <a href="an26.jpg" data-lightbox="classic"><img src="an26.jpg" alt=""></a>
+          <a href="an27.jpg" data-lightbox="classic"><img src="an27.jpg" alt=""></a>
+        <a href="an228.jpg" data-lightbox="classic"><img src="n228.jpg" alt=""></a>
+        <a href="an229.jpg" data-lightbox="classic"><img src="an229.jpg" alt=""></a>
+         <a href="an230.jpg" data-lightbox="classic"><img src="an230.jpg" alt=""></a>
+         <a href="an231.jpg" data-lightbox="classic"><img src="an231.jpg" alt=""></a>
+      <a href="an232.jpg" data-lightbox="classic"><img src="an232.jpg" alt=""></a>
+            <a href="anan234.jpg" data-lightbox="classic"><img src="anan234.jpg" alt=""></a><br>
+<hr style="width: 100%; border: 1px solid #ccc; margin: 20px auto;">
+                <a href="tamp1.jpg" data-lightbox="classic"><img src="tamp1.jpg" alt=""></a>
+              <a href="tamp2.jpg" data-lightbox="classic"><img src="tamp2.jpg" alt=""></a>
+              
+              <a href="tamp3.jpg" data-lightbox="classic"><img src="tamp3.jpg" alt=""></a>
+                  <a href="tamo4.jpg" data-lightbox="classic"><img src="tamo4.jpg" alt=""></a>
+        <!-- Add more as needed -->
+         <hr style="width: 100%; border: 1px solid #ccc; margin: 20px auto;">
+  <p style="width: 100%; text-align: center;">
+    <a href="comm2.pdf" target="_blank" style="
+      background: #d84315;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
+    ">
+      📄 View Product Brochure (PDF)
+    </a>
+  </p>
+      </div>
+<!-- Machine 2: Commercial Chakki Pro -->
+<div class="product-card" onclick="toggleGallery('commercialGallery')">
+  <div class="product-info">
+    <h3>Commercial Chakki Pro</h3>
+    <p>1–5 HP motor, heavy-duty, ideal for shops & businesses.</p>
+  </div>
+</div>
+
+<!-- Commercial Gallery (Hidden Initially) -->
+<div id="commercialGallery" class="gallery-grid">
+  <a href="com1.jpg" data-lightbox="commercial"><img src="com1.jpg" alt=""></a>
+  <a href="com2.jpg" data-lightbox="commercial"><img src="com2.jpg" alt=""></a>
+    <a href="com4.jpg" data-lightbox="commercial"><img src="com4.jpg" alt=""></a>
+<hr style="width: 100%; border: 1px solid #ccc; margin: 20px auto;">
+
+  <!-- Add more as needed -->
+   <p style="width: 100%; text-align: center;">
+    <a href="comm55.pdf" target="_blank" style="
+      background: #d84315;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
+    ">
+      📄 View Product Brochure (PDF)
+    </a>
+  </p>
+</div>
+
+      <!-- Machine 3: Mini Atta Maker -->
+<div class="product-card" onclick="toggleGallery('miniGallery')">
+  <div class="product-info">
+    <h3>Mini Atta Maker</h3>
+    <p>Compact, stylish, perfect for small families and home kitchens.</p>
+  </div>
+</div>
+
+<div id="miniGallery" class="gallery-grid">
+
+  <a href="mini1.jpg" data-lightbox="mini"><img src="mini1.jpg" alt=""></a>
+
+    <a href="mini2.jpg" data-lightbox="commercial"><img src="mini2.jpg" alt=""></a>
+
+  <!-- Add more images if needed -->
+</div>
+
+
+    </div>
+  </section>
+
+
+<!-- Machine Demo Videos -->
+<section id="demo" style="padding: 30px;">
+  <h2>Machine Demo</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+
+    <video width="300" controls>
+      <source src="demo1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video width="300" controls>
+      <source src="demo22.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video width="300" controls>
+      <source src="demo33.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video width="300" controls>
+      <source src="demo55.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video width="300" controls>
+      <source src="demo66.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+<hr style="width: 100%; border: 1px solid #ccc; margin: 20px auto;">
+
+<!-- Classic Flour Mill -->
+<div class="product-section" id="classic">
+  <h2>Classic Flour Mill</h2>
+  <!-- Existing images and content -->
+
+  <!-- Features Section Starts -->
+  <div class="features">
+    <h3>Features of Machines</h3>
+    <div class="features-gallery">
+      <img src="fea1.jpg" class="clickable-image" alt="Feature 1"  width="200">
+      <img src="fea2.jpg" class="clickable-image" alt="Feature 1"  width="200">
+      <img src="fea3.jpg" class="clickable-image" alt="Feature 1"  width="200">
+      <img src="fea4.jpg" class="clickable-image" alt="Feature 1"  width="200">
+      <img src="fea5.jpg"  class="clickable-image" alt="Feature 1"  width="200">
+      <img src="fea6.jpg" class="clickable-image" alt="Feature 1"  width="200">
+      <img src="fea7.jpg" class="clickable-image" alt="Feature 1"  width="200">
+      <img src="fea8.jpg" class="clickable-image" alt="Feature 1"  width="200">
+      <img src="fea9.jpg" class="clickable-image" alt="Feature 1"  width="200">
+      <img src="fea10.jpg" class="clickable-image" alt="Feature 1"  width="200">
+      <img src="fea11.jpg" class="clickable-image" alt="Feature 1"  width="200">
+    </div>
+  </div>
+  <!-- Features Section Ends -->
+</div>
+
+
+
+
+  <footer>
+    <p>&copy; 2025 Anandi Atta Chakki | Satara | Designed by Suzan M.</p>
+  </footer>
+
+  <!-- Toggle Gallery Script -->
+  <script>
+    function toggleGallery(id) {
+      var gallery = document.getElementById(id);
+      gallery.classList.toggle('show-gallery');
+    }
+  </script>
+
+
+
+
+
+
+  <!-- Sticky WhatsApp Chat Button -->
+  <a href="https://wa.me/919922433203" target="_blank" title="Chat with us on WhatsApp" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: #25D366;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 50%;
+    font-size: 24px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-decoration: none;">
+    💬
+  </a>
+<!-- Lightbox Modal -->
+<div id="lightbox-modal" onclick="this.style.display='none'">
+  <img id="lightbox-image" src="" alt="">
+</div>
+
+<script>
+  const zoomImages = document.querySelectorAll('.zoom-img');
+  const lightbox = document.getElementById('lightbox-modal');
+  const lightboxImg = document.getElementById('lightbox-image');
+
+  zoomImages.forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.style.display = 'block';
+    });
+  });
+</script>
+<!-- Fullscreen popup for image -->
+<div class="fullscreen-img" id="imgPopup">
+  <img id="popupImg" src="" alt="Enlarged Image">
+</div>
+<script>
+  const popup = document.getElementById('imgPopup');
+  const popupImg = document.getElementById('popupImg');
+
+  // When user clicks on any image with class 'clickable-image'
+  document.querySelectorAll('.clickable-image').forEach(img => {
+    img.addEventListener('click', () => {
+      popup.style.display = 'flex';
+      popupImg.src = img.src;
+    });
+  });
+
+  // Close popup on click anywhere
+  popup.addEventListener('click', () => {
+    popup.style.display = 'none';
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Anandi Atta Chakki</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fffdfa;
+      color: #333;
+    }
+    header {
+      background: #f9a825;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    .container {
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .contact-info, .contact-form {
+      background-color: #fff3e0;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+    .contact-info h3, .contact-form h3 {
+      margin-top: 0;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #bbb;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #25D366;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+    }
+   footer {
+      background: #fbc02d;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.95em;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Anandi Atta Chakki</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+     <a href="faq.html">FAQs</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <div class="contact-info">
+    <h3>Contact Information</h3>
+    <p><strong>Address:</strong> UG 19, Bhandari Heights Degav phata Rahimatpur Road Near Maha E-seva, Kodoli Satara, Maharashtra</p>
+    <p><strong>Phone:</strong> +91 9922433203/ 9172043202. </p>
+    <p><strong>Email:</strong> mulla.jameer1@gmail.com</p>
+    <p><strong>Timings:</strong> Mon–sun | 9:00 AM – 9:00 PM</p>
+  </div>
+
+  <div class="contact-form">
+    <h3>Send Us a Message</h3>
+    <form onsubmit="sendWhatsApp(event)">
+      <div class="form-group">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required />
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" placeholder="Enter your number" required />
+      </div>
+      <div class="form-group">
+        <label for="message">Your Message:</label>
+        <textarea id="message" rows="4" placeholder="Write your message here..." required></textarea>
+      </div>
+      <button type="submit">Send on WhatsApp</button>
+    </form>
+  </div>
+
+  <div class="map">
+    <h3>Visit Us on Google Maps</h3>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3801.486909558816!2d74.02241864059141!3d17.674444083332197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2399f150d7a5f%3A0xdc15b48b439327ed!2sanandi%20atachakki%20satara!5e0!3m2!1sen!2sin!4v1754329760287!5m2!1sen!2sin" 
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2025 Anandi Atta Chakki | Satara | Designed by Suzan M.
+</footer>
+
+<script>
+  function sendWhatsApp(event) {
+    event.preventDefault();
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !phone || !message) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+    const fullMessage = `Hello! i came here through the website${name}.`;
+    const encoded = encodeURIComponent(fullMessage);
+    const whatsappURL = `https://wa.me/919922433203?text=${encoded}`;
+    window.open(whatsappURL, '_blank');
+  }
+</script>
+
+</body>
+<!-- Sticky WhatsApp Chat Button -->
+<a href="https://wa.me/919922433203" target="_blank" title="Chat with us on WhatsApp" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 50%;
+  font-size: 24px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-decoration: none;">
+  💬
+</a>
+
+</html>
